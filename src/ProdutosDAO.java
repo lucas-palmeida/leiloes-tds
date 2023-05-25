@@ -61,18 +61,18 @@ public class ProdutosDAO {
         }
     }
     
-//    public void venderProduto(int id) {
-//        conn = new conectaDAO().connectDB();
-//        
-//        try {
-//            ps = conn.prepareStatement("UPDATE produtos SET status = 'Vendido' WHERE id = ?");
-//            ps.setInt(1, id);
-//            ps.executeUpdate();
-//            JOptionPane.showMessageDialog(null, "Produto registrado como 'Vendido'!");
-//        } catch (SQLException ex) {
-//            JOptionPane.showMessageDialog(null, "Não foi possível concluir o cadastro: " + ex.getMessage());
-//        }
-//    }
+    public void venderProduto(int id) {
+        conn = new conectaDAO().connectDB();
+        
+        try {
+            ps = conn.prepareStatement("UPDATE produtos SET status = 'Vendido' WHERE id = ?");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Produto registrado como 'Vendido'!");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Não foi possível concluir o cadastro: " + ex.getMessage());
+        }
+    }
 //    
 //    public ArrayList<ProdutosDTO> listarProdutosVendidos() {
 //        conn = new conectaDAO().connectDB();
