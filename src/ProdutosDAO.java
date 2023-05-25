@@ -61,8 +61,42 @@ public class ProdutosDAO {
         }
     }
     
-    
-    
+//    public void venderProduto(int id) {
+//        conn = new conectaDAO().connectDB();
+//        
+//        try {
+//            ps = conn.prepareStatement("UPDATE produtos SET status = 'Vendido' WHERE id = ?");
+//            ps.setInt(1, id);
+//            ps.executeUpdate();
+//            JOptionPane.showMessageDialog(null, "Produto registrado como 'Vendido'!");
+//        } catch (SQLException ex) {
+//            JOptionPane.showMessageDialog(null, "Não foi possível concluir o cadastro: " + ex.getMessage());
+//        }
+//    }
+//    
+//    public ArrayList<ProdutosDTO> listarProdutosVendidos() {
+//        conn = new conectaDAO().connectDB();
+//        
+//        try {
+//            ps = conn.prepareStatement("SELECT * FROM produtos WHERE status LIKE '%Vendido%'");
+//            rs = ps.executeQuery();
+//            
+//            while (rs.next()) {
+//                ProdutosDTO produto = new ProdutosDTO(); 
+//                produto.setId(rs.getInt("id"));
+//                produto.setNome(rs.getString("nome"));
+//                produto.setValor(rs.getInt("valor"));
+//                produto.setStatus(rs.getString("status"));
+//                
+//                listagem.add(produto);
+//            }
+//
+//            return listagem;
+//        } catch (SQLException ex) {
+//            System.out.println("Ocorreu um erro: " + ex.getMessage());
+//            return null;
+//        }
+//    }
         
 }
 
